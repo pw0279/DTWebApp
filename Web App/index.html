@@ -1,0 +1,31 @@
+<html>
+
+	<head>
+        <title>A Portfolio by Peter Whitlock</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css" >
+        <script>
+            function main()
+            {
+                var canvas = document.getElementById("MainCanvas");
+                //canvas.width = window.innerWidth;
+                //canvas.height = window.innerHeight;
+                window.addEventListener("resize", resizeCanvas);
+                
+                function resizeCanvas()
+                {
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                }
+                
+                resizeCanvas();
+            }
+            window.onload = main;
+        </script>
+	</head>
+
+	<body>
+        <canvas id="MainCanvas"></canvas>
+	</body>
+
+<html>
+
