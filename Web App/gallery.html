@@ -4,7 +4,7 @@
         <title>Games Design Portfolio</title>
         <link rel="stylesheet" type="text/css" href="css/main.css" >
         <script>
-            
+
         </script>
 	</head>
 
@@ -15,6 +15,7 @@
                 design
             </div>
         </div>
+        
         <div id="Main">
             <div id="Header">
                 <div id="StripD">
@@ -35,6 +36,19 @@
                     </div>
                 </div>
             </div>
+            
+            <div id="SlideShow">
+                <img src="images/IMG_0126.PNG" class="ImageList"></img>
+                <img src="images/IMG_0139.JPG" class="ImageList"></img>
+                <img src="images/IMG_0142.PNG" class="ImageList"></img>
+            </div>
+            <div id="ButtonBoxBox">
+                <div id="ButtonBox">
+                    <a onclick="PrevButton" id="Prev" href="#!"><</a>
+                    <a onclick="NextButton" id="Next" href="#!">></a>
+                </div>
+            </div>
+            
             <div id="Footer">
                 <div id="QuickNav">
                     <div id="NavBar">
@@ -56,8 +70,55 @@
                     </div>
                 </div>
             </div>
+            
         </div>
+        
 	</body>
+    
+    <script>
+        var ImageCount = 0;
+        const ImageList = document.querySelectorAll("#SlideShow");
+        const PrevButton =  document.getElementById("Prev");
+        const NextButton =  document.getElementById("Next");
+        
+        function hide()
+        {
+            PrevButton.style.display = "none";
+            ImageList[1,2].style.display = "none";
+        }
+        
+        PrevButton.addEventListener("click", function PrevButton()
+        {
+            ImageList[ImageCount].style.display = "none";
+            ImageCount + 1;
+            ImageList[ImageCount].style.display = "block";
+            if (ImageCount = 2)
+            {
+                PrevButton.style.display = "none";
+            }
+            else
+            {
+                PrevButton.style.display = "block";
+            }
+        })
+                                                         
+        NextButton.addEventListener("click", function NextButton()
+        {
+            ImageList[ImageCount].style.display = "none";
+            ImageCount--;
+            ImageList[ImageCount].style.display = "block";
+            if (ImageCount = 0)
+            {
+                NextButton.style.display = "none";
+            }
+            else
+            {
+                NextButton.style.display = "block";
+            }
+        })
+    
+        window.onload = "hide";
+    </script>
 
 <html>
 

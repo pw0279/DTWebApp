@@ -7,8 +7,8 @@
 {
     width: 100%;
     height: 100%;
-    min-width: 1280px;
-    min-height: 950px;
+    min-width: 40rem;
+    min-height: 35rem;
     z-index: 1;
 }
 
@@ -32,6 +32,8 @@
     margin-top: 6%;
     line-height: 100%;
     letter-spacing: -2rem;
+    animation-name: FadeInBackground;
+    animation-duration: 5s;
 }
 
 #Header
@@ -94,13 +96,27 @@
 
 #TitleText
 {
-    font-size: 100;
+    font-size: 50;
     font-family: PingFang HK;
-    letter-spacing: 2rem;
+    letter-spacing: 24;
     color: #f1cf7f;
     transform: rotate(270deg);
     line-height: 0.9;
+    animation-name: FadeIn;
+    animation-duration: 2s;
 }
+
+#SubTitleText
+{
+    font-size: 20;
+    font-family: PingFang HK;
+    color: #f1cf7f;
+    letter-spacing: 1rem;
+    line-height: 0.9;
+    animation-name: FadeIn;
+    animation-duration: 2.5s;
+}
+
 
 #Footer
 {
@@ -131,18 +147,23 @@
     color: #f1cf7f;
     padding: 1rem;
     word-spacing: 0.5vw;
+    animation-name: FadeIn;
+    animation-duration: 3s;
 }
 
 a:hover
 {
     color: #ffffff;
     text-decoration: none;
+    opacity: 100%;
 }
 
 .Links
 {
     text-decoration: none;
     color: #f1cf7f;
+    animation-name: FadeIn;
+    animation-duration: 3s;
 }
 
 #BottomBorder
@@ -209,3 +230,79 @@ a:hover
     margin-left: -10%;
 }
 
+
+#SlideShow
+{
+    padding-top: 9%;
+    margin-right: 5%;
+    width: 60%;
+    height: 60%;
+    float: right;
+    overflow: hidden;
+    position: relative;
+}
+
+.ImageList
+{
+    width: 100%;
+    height: 100%;
+}
+
+#ButtonBoxBox
+{
+    margin-right: 5%;
+    margin-left: 35%;
+    padding-top: 30%;
+    width: 60%;
+    height: 20%;
+    z-index: 10;
+    position: absolute;
+}
+
+#ButtonBox
+{
+    width: 100%;
+    margin: auto;
+    z-index: 100;
+    height: 20%;
+}
+
+#Prev
+{
+    font-size: 50;
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 2%;
+    opacity: 80%;
+}
+
+#Next
+{
+    font-size: 50;
+    color: #ffffff;
+    float: right;
+    text-decoration: none;
+    padding-right: 2%;
+    opacity: 80%;
+    animation-name: FadeInButtons;
+    animation-duration: 3s;
+}
+
+
+@keyframes FadeIn
+{
+    from {color: #000000;}
+    to {color: #f1cf7f;}
+}
+
+@keyframes FadeInBackground
+{
+    from {color: #000000;}
+    to {color: #101010;}
+}
+
+@keyframes FadeInButtons
+{
+    from {color: #b0b0b0;}
+    to {color: #ffffff;}
+}
