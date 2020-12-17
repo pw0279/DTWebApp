@@ -1,0 +1,104 @@
+<html>
+
+	<head>
+        <title>Games Design Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="css/Atempt3.css" >
+        <script>
+            var ImageCounter = 0;
+            var ImageList = [];
+            
+            ImageList[0] = Image1
+            ImageList[1] = Image2
+            ImageList[2] = Image3
+            
+            function Hide()
+            {
+                LeftArrow.style.display = "none";
+                Image2.style.display = "none";
+                Image3.style.display = "none";
+            }
+            
+            function NextImage()
+            {
+                if (ImageCounter < 2)
+                {
+                    ImageList[ImageCounter].style.display = "none";
+                    ImageCounter++;
+                    ImageList[ImageCounter].style.display = "block";
+                    
+                    if (ImageCounter = 2)
+                    {
+                        RightArrow.style.display = "none";
+                    }
+                    else
+                    {
+                        RightArrow.style.display = "block";
+                    }
+                    
+                    if (ImageCounter = 0)
+                    {
+                        LeftArrow.style.display = "none";
+                    }
+                    else
+                    {
+                        LeftArrow.style.display = "block";
+                    }
+                }
+            }
+        
+            function PreviousImage()
+            {
+                if (ImageCounter > 0)
+                {
+                    ImageList[ImageCounter].style.display = "none";
+                    ImageCounter--;
+                    ImageList[ImageCounter].style.display = "block";
+                    
+                    if (ImageCounter = 0)
+                    {
+                        LeftArrow.style.display = "none";
+                    }
+                    else
+                    {
+                        LeftArrow.style.display = "block";
+                    }
+                    
+                    if (ImageCounter = 2)
+                    {
+                        RightArrow.style.display = "none";
+                    }
+                    else
+                    {
+                        RightArrow.style.display = "block";
+                    }
+                }
+            }
+            
+            window.onload = Hide;
+            LeftArrow.onclick = PreviousImage;
+            RightArrow.onclick = NextImage;
+        </script>
+	</head>
+
+	<body id="Body">
+        <div id="Main">
+            <div id="SlideShowBox">
+                <div id="ImageBox">
+                    <a id="LeftArrow" href="#!"><</a>
+                    <div id="Image1">
+                        <img src="images/IMG_0126.PNG" class="Images"></img>
+                    </div>
+                    <div id="Image2">
+                        <img src="images/IMG_0139.JPG" class="Images"></img>
+                    </div>
+                    <div id="Image3">
+                        <img src="images/IMG_0142.PNG" class="Images"></img>
+                    </div>
+                    <a id="RightArrow" href="#!">></a>
+                </div>
+            </div>
+        </div>
+	</body>
+
+<html>
+

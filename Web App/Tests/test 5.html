@@ -1,0 +1,113 @@
+<html>
+
+	<head>
+        <title>Test 5</title>
+        
+        <style>
+            #Body
+            {
+                margin: 0;
+            }
+
+            #SlideShowContainer
+            {
+                margin: auto;
+                width: 50%;
+                height: 50%;
+                float: right;
+                overflow: hidden;
+                border: 10px solid #202020;
+            }
+
+            .SlideShow
+            {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .ImageList
+            {
+                width: 100%;
+                height: 100%;
+            }
+            
+            #NextButton
+            {
+                width: 100;
+                height: auto;
+                cursor: pointer;
+            }
+        
+            #PrevButton
+            {
+                width: 100;
+                height: auto;
+                cursor: pointer;
+            }
+        </style>
+	</head>
+
+	<body id="Body">
+            
+            <div id="SlideShowContainer">
+                <div class="SlideShow">
+                    <img src="images/IMG_0126.PNG" class="ImageList" alt=""></img>
+                    <img src="images/IMG_0139.JPG" class="ImageList" alt=""></img>
+                    <img src="images/IMG_0142.PNG" class="ImageList" alt=""></img>
+                </div>
+            </div>
+            <img src="images/prevarrow.png" id="PrevButton"></img>
+            <img src="images/nextarrow.png" id="NextButton"></img>
+        </div>
+        
+        <script>
+            const slide_show = document.querySelector(".SlideShow");
+            const slide_images = document.querySelectorAll(".SlideShow img");
+            const prev_btn = document.querySelector("#PrevButton");
+            const next_btn = document.querySelector("#NextButton");
+            
+            let counter = 0;
+            var size = window.innerWidth * 0.5;
+            
+            prev_btn.style.display = "none";
+            
+            next_btn.addEventListener("click", function()
+            {
+                counter++;
+                slide_show.style.transform = "translateX(" + (-size * counter) + "px)";
+                
+                if (counter >= slide_images.length - 1)
+                {
+                    next_btn.style.display = "none";
+                    prev_btn.style.display = "block";
+                }
+                else
+                {
+                    next_btn.style.display = "block";
+                    prev_btn.style.display = "block";
+                }
+            });
+            
+            prev_btn.addEventListener("click", function()
+            {
+                counter--;
+                slide_show.style.transform = "translateX(" + (-size * counter) + "px)";
+                if (counter <= 0)
+                {
+                    prev_btn.style.display = "none";
+                    next_btn.style.display = "block";
+                }
+                else
+                {
+                    prev_btn.style.display = "block";
+                    next_btn.style.display = "block";
+                }
+            });
+        </script>
+        
+	</body>
+
+<html>
+

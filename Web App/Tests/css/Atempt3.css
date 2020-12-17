@@ -1,0 +1,79 @@
+#Body
+{
+    margin: 0;
+}
+
+#Main
+{
+    width: 100%;
+    height: 100%;
+}
+
+#SlideShowBox
+{
+    margin: auto;
+    margin-top: 10%;
+    overflow: hidden;
+    width: 579;
+}
+
+#ImageBox
+{
+    display: flex;
+    width: 100%;
+    height: 417;
+    position: relative;
+}
+
+#LeftArrow
+{
+    color: #ffffff;
+    text-decoration: none;
+    z-index: 10;
+    float: left;
+    top: 45%;
+    left: 3%;
+    position: absolute;
+    font-size: 50;
+    opacity: 60%;
+}
+
+.Images
+{
+    width: 579;
+    height: 417;
+}
+
+#Image1
+{
+    
+}
+
+#Image2
+{
+    
+}
+
+#Image3
+{
+    
+}
+
+#RightArrow
+{
+    color: #ffffff;
+    text-decoration: none;
+    top: 45%;
+    right: 3%;
+    z-index: 10;
+    position: absolute;
+    font-size: 50;
+    opacity: 60%;
+}
+
+a:hover
+{
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 100%;
+}

@@ -1,0 +1,69 @@
+#MainCanvas
+{
+    background: #000000;
+    float: right;
+    margin: -20px;
+    
+    border-style: solid;
+    border-color: #000000;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-top: 0px;
+}
+
+#Header
+{
+    background: #000000;
+    float: left;
+    width: 100%;
+    margin: -12px;
+}
+
+#HeaderText
+{
+    font-family: Galvji;
+    color: #eeab53;
+    font-size: 40;
+    padding: 20px;
+    writing-mode: tb-rl;
+    float: right;
+    margin-right: 10px;
+}
+
+#Footer
+{
+    background: #000000;
+    height: 70px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin-left: -8px;
+    
+    border-color: #000000;
+    border-style: solid;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+}
+
+.FooterText
+{
+    font-family: Galvji;
+    color: #ea8f2a;
+    font-size: 10;
+    margin-right: 4%;
+}
+
+a:hover
+{
+    color: #f1cf7f;
+    text-decoration: none;
+}
+
+.Links
+{
+    font-family: Galvji;
+    color: #ea8f2a;
+    font-size: 15;
+    text-decoration: none;
+}
